@@ -1,6 +1,7 @@
 import { defineConfig } from "@tanstack/react-start/config";
 import tsConfigPaths from "vite-tsconfig-paths";
 import tailwindcss from "@tailwindcss/vite";
+import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   tsr: {
@@ -8,13 +9,16 @@ export default defineConfig({
   },
   vite: {
     plugins: [
+      react(),
       tsConfigPaths({
         projects: ["./tsconfig.json"],
       }),
       tailwindcss(),
     ],
-  },
-  server: {
-    preset: "netlify-edge",
+    resolve: {
+      alias: {
+        "@": "/src",
+      },
+    },
   },
 });
