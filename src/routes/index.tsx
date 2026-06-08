@@ -14,14 +14,6 @@ import { Pricing } from "@/components/Pricing";
 import { Contact } from "@/components/Contact";
 
 export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "DZYNER — A Creative Design Studio For Modern Businesses" },
-      { name: "description", content: "DZYNER by Impactful Pitch. One partner. Multiple creative teams. 150K+ designs, 10K+ clients, 3X faster." },
-      { property: "og:title", content: "DZYNER — Creative Design Studio For Modern Businesses" },
-      { property: "og:description", content: "Social media, presentations, branding, infographics & more. No hiring, no overhead." },
-    ],
-  }),
   component: Index,
 });
 
